@@ -1,14 +1,15 @@
 {
     "name": "react-modal-component",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "Un composant modal réutilisable en React",
+    "type": "module",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "babel src --out-dir dist --copy-files",
+        "build": "rollup -c",
         "prepare": "npm run build"
     },
     "repository": {
@@ -25,6 +26,8 @@
         "@babel/core": "^7.26.8",
         "@babel/preset-env": "^7.26.8",
         "@babel/preset-react": "^7.26.3",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-node-resolve": "^16.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "rollup": "^4.2.0"
     }
