@@ -1,0 +1,31 @@
+{
+    "name": "react-modal-component",
+    "version": "1.0.1",
+    "description": "Un composant modal réutilisable en React",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "babel src --out-dir dist --copy-files",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ton-profil/react-modal-component.git"
+    },
+    "author": "Jeremy Lem",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.8",
+        "@babel/preset-env": "^7.26.8",
+        "@babel/preset-react": "^7.26.3",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "rollup": "^4.2.0"
+    }
+}
