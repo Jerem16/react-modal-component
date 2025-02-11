@@ -1,5 +1,6 @@
-import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
+import babel from "@rollup/plugin-babel";
+import postcss from "rollup-plugin-postcss";
 
 export default {
     input: "src/index.js",
@@ -15,7 +16,10 @@ export default {
     ],
     external: ["react", "react-dom"],
     plugins: [
-        resolve(),
-        babel({ babelHelpers: "bundled", exclude: "node_modules/**" }),
+        resolve({
+            extensions: [".js", ".jsx"], // <---- Ajoute ça pour que Rollup reconnaisse les fichiers .jsx
+        }),
+        babel({ babelHelpers: "bundled" }),
+        postcss(),
     ],
 };

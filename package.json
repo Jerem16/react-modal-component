@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ton-profil/react-modal-component.git"
+        "url": "https://github.com/Jerem16/react-modal-component.git"
     },
     "author": "Jeremy Lem",
     "license": "MIT",
@@ -29,6 +29,7 @@
         "@rollup/plugin-babel": "^6.0.4",
         "@rollup/plugin-node-resolve": "^16.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-        "rollup": "^4.2.0"
+        "rollup": "^4.2.0",
+        "rollup-plugin-postcss": "^4.0.2"
     }
 }
