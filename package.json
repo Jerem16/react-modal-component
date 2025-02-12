@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Jerem16/react-modal-component.git"
+        "url": "git+https://github.com/Jerem16/react-modal-component.git"
     },
     "author": "Jeremy Lem",
     "license": "MIT",
@@ -50,6 +50,7 @@
         "react-ui",
         "frontend",
         "javascript",
+        "typescript",
         "npm-package",
         "overlay",
         "lightbox"

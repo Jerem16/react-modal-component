@@ -1,6 +1,6 @@
-# react-modal-component
+# react-modal-component-by-jeremy
 
-# Documentation du composant react-modal-component
+# Documentation du composant :
 
 ## Introduction
 
@@ -9,7 +9,11 @@
 ## Installation
 
 ```sh
-npm install react-modal-component-by-jeremy
+npm install react-modal-component-by-jeremy@latest
+```
+
+```sh
+yarn add react-modal-component-by-jeremy@lasted
 ```
 
 ## Utilisation
@@ -73,6 +77,14 @@ Le composant inclut des icônes SVG pour les types de modale :
 ## Personnalisation CSS
 
 Les styles par défaut sont définis dans `react-modal-component.css`. Vous pouvez les surcharger selon vos besoins.
+
+Par exemple, si vous rencontrez un problème de padding lié aux polices, vous pouvez ajouter la règle CSS suivante :
+
+```css
+.modal-inner_content {
+    padding: 20px !important;
+}
+```
 
 ## Contribution
 
