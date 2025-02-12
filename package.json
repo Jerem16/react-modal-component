@@ -1,6 +1,6 @@
 {
     "name": "react-modal-component-by-jeremy",
-    "version": "1.0.2",
+    "version": "1.0.1",
     "description": "Un composant modal réutilisable en React",
     "type": "module",
     "main": "dist/index.js",
@@ -31,5 +31,25 @@
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "rollup": "^4.2.0",
         "rollup-plugin-postcss": "^4.0.2"
-    }
+    },
+    "keywords": [
+        "react",
+        "modal",
+        "component",
+        "react-modal",
+        "react-component",
+        "ui",
+        "dialog",
+        "popup",
+        "modal-dialog",
+        "accessible-modal",
+        "a11y",
+        "react-popup",
+        "react-ui",
+        "frontend",
+        "javascript",
+        "npm-package",
+        "overlay",
+        "lightbox"
+    ]
 }
