@@ -1,6 +1,6 @@
 {
-    "name": "react-modal-component",
-    "version": "1.0.0",
+    "name": "react-modal-component-by-jeremy",
+    "version": "1.0.1",
     "description": "Un composant modal réutilisable en React",
     "type": "module",
     "main": "dist/index.js",
