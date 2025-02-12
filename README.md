@@ -42,7 +42,7 @@ const App = () => {
                 type="info"
                 title="Titre de la modale"
             >
-                Contenu de la modale
+                <p>Contenu personnalisé de la modale</p>
             </Modal>
         </div>
     );
@@ -53,13 +53,13 @@ export default App;
 
 ## Props
 
-| Nom        | Type     | Description                                        |
-| ---------- | -------- | -------------------------------------------------- |
-| `isOpen`   | `bool`   | Détermine si la modale est affichée ou non.        |
-| `onClose`  | `func`   | Fonction de fermeture de la modale.                |
-| `title`    | `string` | Titre affiché dans la modale.                      |
-| `children` | `node`   | Contenu de la modale.                              |
-| `type`     | `string` | Type de modale (`"success"`, `"error"`, `"info"`). |
+| Nom        | Type     | Description                                                                                        |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------- |
+| `isOpen`   | `bool`   | Détermine si la modale est affichée ou non.                                                        |
+| `onClose`  | `func`   | Fonction de fermeture de la modale.                                                                |
+| `title`    | `string` | Titre affiché dans la modale.                                                                      |
+| `children` | `node`   | Contenu personnalisé de la modale (peut inclure du texte, des composants React, des images, etc.). |
+| `type`     | `string` | Type de modale (`"success"`, `"error"`, `"info"`).                                                 |
 
 ## Accessibilité
 

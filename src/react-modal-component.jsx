@@ -110,7 +110,7 @@ const Modal = ({ isOpen, onClose, title, children, type }) => {
                         </h2>
                     </div>
                     <div className="modal-body">
-                        <p id="modal-description">{children}</p>
+                        <div id="modal-description">{children}</div>
                     </div>
                 </div>
             </dialog>
