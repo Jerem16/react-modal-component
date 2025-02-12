@@ -4,6 +4,7 @@ export interface ModalProps {
     isOpen: boolean;
     children: ReactNode;
     onClose: () => void;
+    title: string;
 }
 
 declare function Modal(props: ModalProps): JSX.Element;
