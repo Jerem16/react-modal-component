@@ -2,7 +2,7 @@
     "name": "react-modal-component-by-jeremy",
     "version": "1.0.5",
     "description": "Un composant modal réutilisable en React",
-    "type": "module",
+    "types": "dist/index.d.ts",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "files": [
@@ -31,6 +31,7 @@
         "@rollup/plugin-terser": "^0.4.4",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "rollup": "^4.2.0",
+        "rollup-plugin-dts": "^6.1.1",
         "rollup-plugin-postcss": "^4.0.2"
     },
     "keywords": [
