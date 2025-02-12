@@ -23,17 +23,16 @@ export default [
         ],
         external: ["react", "react-dom"],
         plugins: [
-            resolve({
-                extensions: [".js", ".jsx"], // Supporte .jsx
-            }),
+            resolve({ extensions: [".js", ".jsx"] }),
             babel({ babelHelpers: "bundled" }),
             postcss(),
-            terser(), // Minifie tous les fichiers automatiquement
+            terser(),
         ],
     },
     {
         input: "src/index.d.ts",
         output: [{ file: "dist/index.d.ts", format: "es" }],
         plugins: [dts()],
+        external: ["react", "react-dom"],
     },
 ];
