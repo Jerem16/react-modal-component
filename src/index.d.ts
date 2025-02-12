@@ -5,6 +5,7 @@ export interface ModalProps {
     children: ReactNode;
     onClose: () => void;
     title: string;
+    type: string;
 }
 
 declare function Modal(props: ModalProps): JSX.Element;
