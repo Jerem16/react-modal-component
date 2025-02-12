@@ -59,13 +59,14 @@ const Modal = ({ isOpen, onClose, title, children, type }) => {
 
     const getIcon = () => {
         switch (type) {
+            case "info":
+                return <InfoCircle className="modal-icon info" />;
             case "success":
                 return <CheckCircle className="modal-icon success" />;
             case "error":
                 return <ErrorIcon className="modal-icon error" />;
-            case "info":
             default:
-                return <InfoCircle className="modal-icon info" />;
+                return null;
         }
     };
 
@@ -103,8 +104,8 @@ const Modal = ({ isOpen, onClose, title, children, type }) => {
                 </button>
                 <div className="modal-inner_content">
                     <div className="modal-header">
-                        {getIcon()}
                         <h2 id="modal-title" className="modal-title">
+                            {getIcon()}
                             {title}
                         </h2>
                     </div>
