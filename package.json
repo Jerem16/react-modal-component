@@ -28,6 +28,7 @@
         "@babel/preset-react": "^7.26.3",
         "@rollup/plugin-babel": "^6.0.4",
         "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-terser": "^0.4.4",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "rollup": "^4.2.0",
         "rollup-plugin-postcss": "^4.0.2"
