@@ -1,38 +1,12 @@
 {
     "name": "react-modal-component-by-jeremy",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "description": "Un composant modal réutilisable en React",
-    "types": "dist/index.d.ts",
-    "main": "dist/index.js",
-    "module": "dist/index.esm.js",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "rollup -c",
-        "prepare": "npm run build"
-    },
+    "author": "Jérémy Lemaignent",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Jerem16/react-modal-component.git"
-    },
-    "author": "Jeremy Lem",
-    "license": "MIT",
-    "peerDependencies": {
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.26.8",
-        "@babel/preset-env": "^7.26.8",
-        "@babel/preset-react": "^7.26.3",
-        "@rollup/plugin-babel": "^6.0.4",
-        "@rollup/plugin-node-resolve": "^16.0.0",
-        "@rollup/plugin-terser": "^0.4.4",
-        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-        "rollup": "^4.2.0",
-        "rollup-plugin-dts": "^6.1.1",
-        "rollup-plugin-postcss": "^4.0.2"
     },
     "keywords": [
         "react",
@@ -54,5 +28,31 @@
         "npm-package",
         "overlay",
         "lightbox"
-    ]
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "prepare": "npm run build"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.8",
+        "@babel/preset-env": "^7.26.8",
+        "@babel/preset-react": "^7.26.3",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-terser": "^0.4.4",
+        "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+        "rollup": "^4.2.0",
+        "rollup-plugin-dts": "^6.1.1",
+        "rollup-plugin-postcss": "^4.0.2"
+    }
 }
