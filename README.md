@@ -6,6 +6,12 @@
 
 `react-modal-component-by-jeremy` est un composant React réutilisable permettant d'afficher des modales accessibles et stylisées avec différents types d'alertes.
 
+## Prérequis
+
+- **Node.js** : `>= 16.0.0`
+- **React** : `>= 17.0.0`
+- **Éditeur recommandé** : [VS Code](https://code.visualstudio.com/)
+
 ## Installation
 
 ```sh
@@ -13,7 +19,7 @@ npm install react-modal-component-by-jeremy@latest
 ```
 
 ```sh
-yarn add react-modal-component-by-jeremy@lasted
+yarn add react-modal-component-by-jeremy@latest
 ```
 
 ## Utilisation
@@ -51,7 +57,7 @@ const App = () => {
 export default App;
 ```
 
-## Props
+## Props disponibles
 
 | Nom        | Type     | Description                                                                                        |
 | ---------- | -------- | -------------------------------------------------------------------------------------------------- |
@@ -63,8 +69,8 @@ export default App;
 
 ## Accessibilité
 
--   La navigation au clavier est gérée (fermeture avec `Escape`, focus piégé dans la modale).
--   `aria-labelledby` et `aria-describedby` sont utilisés pour améliorer l'accessibilité.
+- Navigation au clavier gérée (fermeture avec `Escape`, focus piégé dans la modale).
+- Utilisation des attributs `aria-labelledby` et `aria-describedby` pour améliorer l'accessibilité.
 
 ## Icônes intégrées
 
