@@ -9,7 +9,7 @@
 ## Prérequis
 
 - **Node.js** : `>= 16.0.0`
-- **React** : `>= 17.0.0`
+- **React** : `>= 17.0.0` (compatible 17.x, 18.x, 19.x)
 - **Éditeur recommandé** : [VS Code](https://code.visualstudio.com/)
 
 ## Installation
@@ -94,7 +94,7 @@ Par exemple, si vous rencontrez un problème de padding lié aux polices, vous p
 
 ## Contribution
 
-Les contributions sont les bienvenues ! Forkez le projet et soumettez une pull request sur [GitHub](https://github.com/Jerem16/react-modal-component).
+Les contributions sont les bienvenues ! Forkez le projet et soumettez une pull request sur GitHub.
 
 ## Licence
 

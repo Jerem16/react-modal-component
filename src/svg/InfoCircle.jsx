@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 const InfoCircle = ({ className = "" }) => {
     return (
         <div className={`attr-icon ${className}`}>
