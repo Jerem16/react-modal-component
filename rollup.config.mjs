@@ -1,9 +1,10 @@
-// rollup.config.mjs (version CommonJS)
-import resolve from "@rollup/plugin-node-resolve";
+﻿import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
-import { terser } from "@rollup/plugin-terser";
+import terserPlugin from "@rollup/plugin-terser";
 import dts from "rollup-plugin-dts";
+
+const terser = terserPlugin.terser ?? terserPlugin;
 
 export default [
   {
