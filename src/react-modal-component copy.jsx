@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./react-modal-component.css";
 import SearchClose from "./svg/SearchClose";
 import CheckCircle from "./svg/CheckCircle";
@@ -36,6 +36,20 @@ const Modal = ({
     const closeButtonRef = useRef(null);
     const previousActiveElement = useRef(null);
 
+    /** Map d'icônes pour réduire le branching */
+    const ICONS = useMemo(
+        () => ({
+            info: <InfoCircle className="modal-icon info" />,
+            success: <CheckCircle className="modal-icon success" />,
+            error: <ErrorIcon className="modal-icon error" />,
+            warning: <WarningIcon className="modal-icon warning" />, // ⬅️ ICI
+        }),
+        []
+    );
+
+    const icon = ICONS[type] ?? null;
+
+    /** Gestion Tab + Escape (focus trap + fermeture ESC) */
     const handleKeyDown = useCallback(
         (e) => {
             if (!isOpen) return;
@@ -88,62 +102,46 @@ const Modal = ({
         };
     }, [isOpen, hideCloseButton, handleKeyDown]);
 
-    const getIcon = () => {
-        switch (type) {
-            case "info":
-                return <InfoCircle className="modal-icon info" />;
-            case "success":
-                return <CheckCircle className="modal-icon success" />;
-            case "error":
-                return <ErrorIcon className="modal-icon error" />;
-            case "warning":
-                return <WarningIcon className="modal-icon warning" />;
-            default:
-                return null;
-        }
-    };
-
     if (!isOpen) return null;
 
     return (
         <div
-            className={`modal-overlay ${isOpen ? "show" : ""}`}
+            className={`modal-overlay show`}
             onClick={(e) => {
                 // Fermer uniquement si on clique réellement l’overlay (pas un enfant)
                 if (closeOnOverlayClick && e.target === e.currentTarget)
                     onClose();
             }}
-            role="presentation"
-            tabIndex={-1}
-            aria-hidden={isOpen ? "false" : "true"}
         >
             <dialog
-                className={`modal-content ${type}`}
+                className={`modal-content ${type ?? ""}`}
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
-                ref={modalRef}
+                aria-modal="true"
                 open={isOpen}
+                ref={modalRef}
+                // Stop propagation pour éviter que le clic remonte à l’overlay
                 onClick={(e) => e.stopPropagation()}
-                onKeyDown={(e) => {
-                    if (e.key === "Escape") onClose();
-                }}
                 tabIndex={-1}
             >
-                <button
-                    ref={closeButtonRef}
-                    className="modal-close"
-                    onClick={onClose}
-                    aria-label="Fermer la boîte de dialogue"
-                >
-                    <SearchClose className="close-icon" />
-                </button>
+                {!hideCloseButton && (
+                    <button
+                        ref={closeButtonRef}
+                        className="modal-close"
+                        onClick={onClose}
+                        aria-label="Fermer la boîte de dialogue"
+                    >
+                        <SearchClose className="close-icon" />
+                    </button>
+                )}
 
                 <div className="modal-inner_content">
                     <div className="modal-header">
                         <h2 id="modal-title" className="modal-title">
-                            {getIcon()} {title}
+                            {icon} {title}
                         </h2>
                     </div>
+
                     <div className="modal-body">
                         <div id="modal-description">{children}</div>
                     </div>
